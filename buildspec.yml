@@ -20,7 +20,7 @@ phases:
     commands:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - printf '[{"name":"newsroom-staging-container","imageUri":"%s"}]' 924534503563.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"newsroom-staging-container","imageUri":"%s"}]' 924534503563.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$REPOSITORY_NAME:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files: imagedefinitions.json
